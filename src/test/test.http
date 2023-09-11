@@ -1,4 +1,4 @@
-POST localhost:8080/reward?userId=1&amount=250
+POST localhost:8080/reward?userId=1&amount=168.59
 
 ###
-GET localhost:8080/reward?userId=2&start=1686408017
+GET localhost:8080/reward?userId=1&start=1691819778

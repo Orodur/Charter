@@ -1,30 +1,25 @@
 package com.assessment.Entity;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table
 public class Transaction {
+
+    @Id
+    @GeneratedValue(strategy= GenerationType.UUID)
     private String transactionId;
     private long time;
     private String userId;
     private double amount;
     private int rewardPoints;
 
+    public Transaction() {
+    }
+
     public Transaction(String userId, double amount) {
         this.userId = userId;
         this.amount = amount;
-    }
-
-    public Transaction(long time, String userId, double amount, int rewardPoints) {
-        this.time = time;
-        this.userId = userId;
-        this.amount = amount;
-        this.rewardPoints = rewardPoints;
-    }
-
-    public Transaction(String transactionId, long time, String userId, double amount, int rewardPoints) {
-        this.transactionId = transactionId;
-        this.time = time;
-        this.userId = userId;
-        this.amount = amount;
-        this.rewardPoints = rewardPoints;
     }
 
     public String getTransactionId() {
